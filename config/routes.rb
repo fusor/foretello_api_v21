@@ -215,6 +215,7 @@ Foreman::Application.routes.draw do
           end
           resources :autosign, :only => [:index]
         end
+        resources :discovered_hosts, :except => [:new, :edit]
         resources :hosts, :except => [:new, :edit] do
           get :status, :on => :member
           put :puppetrun, :on => :member
