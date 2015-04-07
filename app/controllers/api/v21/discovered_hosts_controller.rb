@@ -18,7 +18,7 @@ module Api
       def rename
         not_found and return false if params[:id].blank?
         @discovered_host = ::Host::Discovered.find(params[:id])
-        @discovered_host.update_attributes!(:name => params[:discovered_host][:name])
+        @discovered_host.update_attribute(:name, params[:discovered_host][:name])
         render :json => @discovered_host, :serializer => DiscoveredHostSerializer
       end
 
