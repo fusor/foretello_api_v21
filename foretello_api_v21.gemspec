@@ -1,4 +1,5 @@
 require File.expand_path('../lib/foretello_api_v21/version', __FILE__)
+require 'date'
 
 Gem::Specification.new do |s|
   s.name        = "foretello_api_v21"
