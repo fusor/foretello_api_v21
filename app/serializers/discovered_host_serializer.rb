@@ -25,7 +25,7 @@ class DiscoveredHostSerializer < ActiveModel::Serializer
   end
 
   def subnet_to_s
-    object.subnet.to_s
+    ""
   end
 
   def is_virtual
