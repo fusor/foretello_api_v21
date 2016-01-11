@@ -3,11 +3,6 @@ module Api
     class BaseController < Api::BaseController
       include Api::Version21
 
-      resource_description do
-        api_version "V21"
-        app_info N_("Foretello V21 is experimental. You may use V21 by either passing 'version=21' in the Accept Header or using api/V21/ in the URL.")
-      end
-
       before_filter :setup_has_many_params, :only => [:create, :update]
       before_filter :check_content_type
       # ensure include_root_in_json = false for V3 only

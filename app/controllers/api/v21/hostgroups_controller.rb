@@ -4,10 +4,15 @@ module Api
 
       include Api::Version21
 
+      api :GET, "/hostgroups/", N_("List all host groups")
+
       def index
         @hostgroups = Hostgroup.all
         render :json => @hostgroups, :each_serializer => HostgroupSerializer
       end
+
+      api :GET, "/hostgroups/:id/", N_("Show a host group")
+      param :id, :identifier, :required => true
 
       def show
         render :json => @hostgroup, :serializer => HostgroupSerializer
