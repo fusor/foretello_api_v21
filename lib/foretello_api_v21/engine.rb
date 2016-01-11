@@ -16,7 +16,7 @@ module ForetelloApiV21
           }, :resource_type => '::Host::Discovered'
         end
 
-        apipie_documented_controllers ["#{ForetelloApiV21::Engine.root}/app/controllers/api/v21/*.rb"]
+        #apipie_documented_controllers ["#{ForetelloApiV21::Engine.root}/app/controllers/api/v21/*.rb"]
       end
     end
 
