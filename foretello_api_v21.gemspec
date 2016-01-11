@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Joseph Magen"]
   s.email       = ["jmagen@redhat.com"]
   s.homepage    = "http://www.theforeman.org"
-  s.summary     = "Foreman and Katello API based on jsonapi.org spec."
-  s.description = ""
+  s.summary     = "Plugin engine to that adds v21 API for Foreman and Katello based on jsonapi.org spec."
+  s.description = "Plugin engine to that adds v21 API for Foreman and Katello based on jsonapi.org spec."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
