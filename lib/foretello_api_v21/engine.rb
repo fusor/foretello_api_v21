@@ -6,7 +6,7 @@ module ForetelloApiV21
     config.autoload_paths += Dir["#{config.root}/app/controllers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/serializers"]
 
-    initializer 'foretello_api_v21.register_plugin', :after => :finisher_hook do |app|
+    initializer 'foretello_api_v21.register_plugin' do |app|
       Foreman::Plugin.register :foretello_api_v21 do
         requires_foreman '>= 1.7'
 
