@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @config_templates, :each_serializer => ConfigTemplateSerializer
+        render :json => @config_templates, :each_serializer => ConfigTemplateSerializer, :serializer => RootArraySerializer
       end
 
       def show

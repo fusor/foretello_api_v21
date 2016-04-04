@@ -7,7 +7,7 @@ module Api
       def index
         super
         @discovered_hosts = @discovered_hosts.where(:id => params[:id]) if params[:id].present?
-        render :json => @discovered_hosts, :each_serializer => HostBaseSerializer
+        render :json => @discovered_hosts, :each_serializer => HostBaseSerializer, :serializer => RootArraySerializer
       end
 
       def show

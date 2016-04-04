@@ -15,7 +15,7 @@ module Api
           @total = taxonomy_class.count
         end
         instance_variable_set("@#{taxonomies_plural}", @taxonomies)
-        render :json => @locations, :each_serializer => LocationSerializer
+        render :json => @locations, :each_serializer => LocationSerializer, :serializer => RootArraySerializer
       end
 
       def show

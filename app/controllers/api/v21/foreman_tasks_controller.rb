@@ -20,7 +20,7 @@ module Api
                             }
         @foreman_tasks = pagination_scope(@foreman_tasks, pagination_params)
 
-        render :json => @foreman_tasks, :each_serializer => ForemanTaskSerializer
+        render :json => @foreman_tasks, :each_serializer => ForemanTaskSerializer, :serializer => RootArraySerializer
       end
 
       def show
