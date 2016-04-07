@@ -9,7 +9,7 @@ module Api
 
       def index
         @lifecycle_environments = ::Katello::KTEnvironment.readable.where(:organization_id => @organization.id)
-        render :json => @lifecycle_environments, :each_serializer => LifecycleEnvironmentSerializer
+        render :json => @lifecycle_environments, :each_serializer => LifecycleEnvironmentSerializer, :serializer => RootArraySerializer
       end
 
       def show

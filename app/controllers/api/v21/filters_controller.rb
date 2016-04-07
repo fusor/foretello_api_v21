@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @filters, :each_serializer => FilterSerializer
+        render :json => @filters, :each_serializer => FilterSerializer, :serializer => RootArraySerializer
       end
 
       def show

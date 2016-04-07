@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @compute_profiles, :each_serializer => ComputeProfileSerializer
+        render :json => @compute_profiles, :each_serializer => ComputeProfileSerializer, :serializer => RootArraySerializer
       end
 
       def show

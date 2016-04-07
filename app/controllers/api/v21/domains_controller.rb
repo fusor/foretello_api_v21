@@ -15,7 +15,7 @@ module Api
       param :id, :identifier, :required => true, :desc => N_("Numerical ID or domain name")
 
       def show
-        render :json => @domain, :serializer => DomainSerializer
+        render :json => @domain, :serializer => DomainSerializer, :serializer => RootArraySerializer
       end
 
     end

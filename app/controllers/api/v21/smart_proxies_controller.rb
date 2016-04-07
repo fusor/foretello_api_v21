@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @smart_proxies, :each_serializer => SmartProxySerializer
+        render :json => @smart_proxies, :each_serializer => SmartProxySerializer, :serializer => RootArraySerializer
       end
 
       def show

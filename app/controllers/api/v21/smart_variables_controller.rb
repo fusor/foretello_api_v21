@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @smart_variables, :each_serializer => SmartVariableSerializer
+        render :json => @smart_variables, :each_serializer => SmartVariableSerializer, :serializer => RootArraySerializer
       end
 
       def show

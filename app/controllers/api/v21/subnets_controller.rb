@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @subnets, :each_serializer => SubnetSerializer
+        render :json => @subnets, :each_serializer => SubnetSerializer, :serializer => RootArraySerializer
       end
 
       def show
