@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @realms, :each_serializer => RealmSerializer
+        render :json => @realms, :each_serializer => RealmSerializer, :serializer => RootArraySerializer
       end
 
       def show

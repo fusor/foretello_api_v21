@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @compute_resources, :each_serializer => ComputeResourceSerializer
+        render :json => @compute_resources, :each_serializer => ComputeResourceSerializer, :serializer => RootArraySerializer
       end
 
       def show

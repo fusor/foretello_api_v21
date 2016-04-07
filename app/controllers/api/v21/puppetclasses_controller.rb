@@ -14,7 +14,7 @@ module Api
                        nested_obj.puppetclasses.search_for(*search_options)
                    end
         @puppetclasses = values
-        render :json => @puppetclasses, :each_serializer => PuppetclassSerializer
+        render :json => @puppetclasses, :each_serializer => PuppetclassSerializer, :serializer => RootArraySerializer
       end
 
       def show

@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @parameters, :each_serializer => ParameterSerializer
+        render :json => @parameters, :each_serializer => ParameterSerializer, :serializer => RootArraySerializer
       end
 
       def show

@@ -6,7 +6,7 @@ module Api
 
       def index
         super
-        render :json => @ptables, :each_serializer => PtableSerializer
+        render :json => @ptables, :each_serializer => PtableSerializer, :serializer => RootArraySerializer
       end
 
       def show

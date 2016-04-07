@@ -8,7 +8,7 @@ module Api
 
       def index
         @hostgroups = Hostgroup.all
-        render :json => @hostgroups, :each_serializer => HostgroupSerializer
+        render :json => @hostgroups, :each_serializer => HostgroupSerializer, :serializer => RootArraySerializer
       end
 
       api :GET, "/hostgroups/:id/", N_("Show a host group")
