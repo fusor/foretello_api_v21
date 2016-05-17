@@ -28,8 +28,8 @@
 Summary: Plugin for Foreman & Katello API v2.1, which is based on v2 controllers but uses the response format according to the jsonapi.org specification.
 Name: %{?scl_prefix}rubygem-%{gem_name}
 
-Version: 0.0.1
-Release: 6%{dist}
+Version: 1.0.0
+Release: 0%{dist}
 Group: Development/Ruby
 License: Distributable
 URL: https://github.com/fusor/foretello_api_v21
