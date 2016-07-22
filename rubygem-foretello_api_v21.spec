@@ -29,7 +29,7 @@ Summary: Plugin for Foreman & Katello API v2.1, which is based on v2 controllers
 Name: %{?scl_prefix}rubygem-%{gem_name}
 
 Version: 1.0.0
-Release: 0%{dist}
+Release: 0%{?dist}
 Group: Development/Ruby
 License: Distributable
 URL: https://github.com/fusor/foretello_api_v21
