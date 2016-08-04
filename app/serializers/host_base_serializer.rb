@@ -23,11 +23,7 @@ class HostBaseSerializer < ActiveModel::Serializer
   end
 
   def cpus
-    if is_managed
-      object.facts_hash['processorcount']
-    elsif is_discovered
-      object.cpu_count
-    end
+    object.facts_hash['processorcount']
   end
 
   def memory_human_size
