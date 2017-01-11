@@ -1,6 +1,6 @@
 class DomainSerializer < ActiveModel::Serializer
   embed :ids, include: true
-  attributes :id, :name, :fullname, :dns_id, :domain_parameters_attributes, :created_at, :updated_at
+  attributes :id, :name, :fullname, :dns_id, :created_at, :updated_at
   # has_many :locations
   # has_many :organizations
   # has_many :parameters
